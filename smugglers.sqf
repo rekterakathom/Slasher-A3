@@ -1,10 +1,11 @@
-missionNamespace setVariable ["teleport_dest", 1, true];
-publicVariable "teleport_dest";
 
-null = ["smuggler_1",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";
-null = ["smuggler_2",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";
+missionNamespace setVariable ["teleport_dest", 1, true]; //Create a variable
+publicVariable "teleport_dest";                         //Make it public
 
-sleep 10*60;
+null = ["smuggler_1",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";  //Create the smuggler
+null = ["smuggler_2",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf"; //Create the second smuggler
 
-missionNamespace setVariable ["teleport_dest", 2, true];
-publicVariable "teleport_dest";
+sleep 10*60; //Wait ten minutes
+
+missionNamespace setVariable ["teleport_dest", 2, true]; //Change the variable
+publicVariable "teleport_dest";                         //And make sure it is public

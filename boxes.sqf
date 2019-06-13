@@ -1,20 +1,20 @@
-loota hideObjectGlobal true;
+loota hideObjectGlobal true;   //Hide the boxes
 loota_1 hideObjectGlobal true;
-loota2 hideObjectGlobal true;
+loota2 hideObjectGlobal true; 
 loota3 hideObjectGlobal true;
-loota4 hideObjectGlobal true;
-loota5 hideObjectGlobal true;
-loota6 hideObjectGlobal true;
-loota8 hideObjectGlobal true;
+loota4 hideObjectGlobal true; 
+loota5 hideObjectGlobal true; 
+loota6 hideObjectGlobal true; 
+loota8 hideObjectGlobal true; 
 
 
 _rNumber1 = random [100, 120, 140]; //Generate the first random number for a timer
 _rNumber1 = round _rNumber1;
 sleep _rNumber1;
-titleText ["Four boxes containing radios have appeared!", "PLAIN", 1];
-playSound "FD_Target_PopDown_Large_F";
-playSound "FD_Target_PopDown_Large_F";
-loota3 hideObjectGlobal false;
+titleText ["Four boxes containing radios have appeared!", "PLAIN", 1]; //Tell the world that the boxes have appeared
+playSound "FD_Target_PopDown_Large_F"; //Play a sound effect as well
+playSound "FD_Target_PopDown_Large_F"; //Make it louder by playing it twice
+loota3 hideObjectGlobal false; //Reveal the boxes
 loota4 hideObjectGlobal false;
 loota5 hideObjectGlobal false;
 loota6 hideObjectGlobal false;
@@ -39,7 +39,7 @@ loota hideObjectGlobal false;
 loota_1 hideObjectGlobal false;
 
 
-_rNumber4 = round random [580, 600, 620]; //Generate the third random number for a timer
+_rNumber4 = round random [580, 600, 620]; //Generate the fourth random number for a timer
 _rNumber4 = round _rNumber4;
 sleep _rNumber4;
 titleText ["A box containing portal keys has appeared!", "PLAIN", 1];

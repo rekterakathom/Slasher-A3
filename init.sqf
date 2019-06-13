@@ -12,6 +12,6 @@ publicVariable "surv"; //Set the array public
 
 sleep 30;
 
-gate setVariable ['bis_disabled_Door_1',0,true];
-gate animate ["Door_1_rot", 1];
+gate setVariable ['bis_disabled_Door_1',0,true]; //Open the door for the slasher
+gate animate ["Door_1_rot", 1]; //Open the door for the slasher
 
