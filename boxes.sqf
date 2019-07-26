@@ -8,10 +8,19 @@ loota6 hideObjectGlobal true;
 loota8 hideObjectGlobal true; 
 
 
+_param = TFAR_used call BIS_fnc_getParamValue; //Check if the TFAR parameter is enabled or not
+if (_param == 1) then {
+loota3 addItemCargoGlobal [TFAR_anprc152, 1]; //If enabled, add radios to the crates
+loota4 addItemCargoGlobal [TFAR_anprc152, 1]; 
+loota5 addItemCargoGlobal [TFAR_anprc152, 1]; 
+loota6 addItemCargoGlobal [TFAR_anprc152, 1]; 
+};
+
+
 _rNumber1 = random [100, 120, 140]; //Generate the first random number for a timer
 _rNumber1 = round _rNumber1;
 sleep _rNumber1;
-titleText ["Four boxes containing radios have appeared!", "PLAIN", 1]; //Tell the world that the boxes have appeared
+titleText ["Four boxes containing supplies have appeared!", "PLAIN", 1]; //Tell the world that the boxes have appeared
 playSound "FD_Target_PopDown_Large_F"; //Play a sound effect as well
 playSound "FD_Target_PopDown_Large_F"; //Make it louder by playing it twice
 loota3 hideObjectGlobal false; //Reveal the boxes
