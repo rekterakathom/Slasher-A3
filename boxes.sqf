@@ -8,12 +8,12 @@ loota6 hideObjectGlobal true;
 loota8 hideObjectGlobal true; 
 
 
-_param = TFAR_used call BIS_fnc_getParamValue; //Check if the TFAR parameter is enabled or not
+_param = "TFAR_used" call BIS_fnc_getParamValue; //Check if the TFAR parameter is enabled or not
 if (_param == 1) then {
-loota3 addItemCargoGlobal [TFAR_anprc152, 1]; //If enabled, add radios to the crates
-loota4 addItemCargoGlobal [TFAR_anprc152, 1]; 
-loota5 addItemCargoGlobal [TFAR_anprc152, 1]; 
-loota6 addItemCargoGlobal [TFAR_anprc152, 1]; 
+loota3 addItemCargoGlobal ["TFAR_anprc152", 1]; //If enabled, add radios to the crates
+loota4 addItemCargoGlobal ["TFAR_anprc152", 1]; 
+loota5 addItemCargoGlobal ["TFAR_anprc152", 1]; 
+loota6 addItemCargoGlobal ["TFAR_anprc152", 1]; 
 };
 
 

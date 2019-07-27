@@ -24,13 +24,15 @@ while {alive _obj_teleporter} do
 			{
 			_items = backpackItems _x;
 				if ((headgear _x == protection_smug)or(goggles _x==protection_smug)or(uniform _x==protection_smug)or(vest _x==protection_smug)or(Backpack _x==protection_smug) or (protection_smug in (assigneditems _x + items _x))) then {
-				if (_tpdest == 1) then {
+				if (_tpdest isEqualTo 1) then {
 								_dest_tele = getPos teleport1; 
+								//hint "Teleport 1";
 								_x setPos _dest_tele;
 								[] spawn {execVM "AL_smuggler\video_effect.sqf"};
                                 _x removeItem "MineDetector";
 								} else {
 								_dest_tele = getPos teleport2; 
+								//hint "Teleport 2";
 								_x setPos _dest_tele;
 								[] spawn {execVM "AL_smuggler\video_effect.sqf"};
                                 _x removeItem "MineDetector";
@@ -47,7 +49,7 @@ while {alive _obj_teleporter} do
 				[_x] call fnc_teleportSFX_AI;
 				if ((headgear _x == protection_smug)or(goggles _x==protection_smug)or(uniform _x==protection_smug)or(vest _x==protection_smug)or(Backpack _x==protection_smug) or (protection_smug in (assigneditems _x + items _x))) then {
 				if (_tpdest == 1) then {
-				hint "homo";
+				//hint "DEBUG";
 								_dest_tele = getPos teleport1; 
 								_x setPos _dest_tele;
 								[] spawn {execVM "AL_smuggler\video_effect.sqf"};

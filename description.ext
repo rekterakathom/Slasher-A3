@@ -1,3 +1,6 @@
+OnLoadName = "Slasher";
+
+
 class Params
 {
 	class TFAR_used
@@ -5,7 +8,7 @@ class Params
 		title = "Task Force Radio Toggle"; // Param name visible in the list
 		values[] = {0,1}; // Values; must be integers; has to have the same number of elements as 'texts'
 		texts[] = {"Off","On"}; // Description of each selectable item
-		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+		default = 0; // Default value; must be listed in 'values' array, otherwise 0 is used
 		// Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
 	};
 };
@@ -393,4 +396,46 @@ class CfgSounds
 		sound[] = {"\sounds\halu_9999.ogg", db+10, 1};
 		titles[] = {};
 	};	
+		class spark1
+	{
+		name = "spark1";
+		sound[] = {"\sound\spark1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark11
+	{
+		name = "spark11";
+		sound[] = {"\sound\spark11.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark2
+	{
+		name = "spark2";
+		sound[] = {"\sound\spark2.ogg", db+5, 1};
+		titles[] = {};
+	};		
+	class spark22
+	{
+		name = "spark22";
+		sound[] = {"\sound\spark22.ogg", db+5, 1};
+		titles[] = {};
+	};	
+	class spark3	
+	{
+		name = "spark3";
+		sound[] = {"\sound\spark3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark4	
+	{
+		name = "spark4";
+		sound[] = {"\sound\spark4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark5	
+	{
+		name = "spark5";
+		sound[] = {"\sound\spark5.ogg", db+5, 1};
+		titles[] = {};
+	};
 };
