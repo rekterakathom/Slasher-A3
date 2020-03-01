@@ -7,6 +7,17 @@ loota5 hideObjectGlobal true;
 loota6 hideObjectGlobal true; 
 loota8 hideObjectGlobal true; 
 
+_spawn_1 = getPos spawn_1;
+_spawn_2 = getPos spawn_2;
+_spawn_3 = getPos spawn_3;
+_spawn_4 = getPos spawn_4;
+_spawn_5 = getPos spawn_5;
+_spawn_6 = getPos spawn_6;
+
+_cratePos = selectRandom [_spawn_1,_spawn_2,_spawn_3,_spawn_4,_spawn_5,_spawn_6]; //Get tje first crate positions from above, into an array and randomize spawn from array
+
+spawnCrate setPos _cratePos; //spawn the crate at a random pos from the array
+
 
 _param = "TFAR_used" call BIS_fnc_getParamValue; //Check if the TFAR parameter is enabled or not
 if (_param == 1) then {

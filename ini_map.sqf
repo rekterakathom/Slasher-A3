@@ -4,7 +4,7 @@ _survspawn3 = getPos surv_3; //Variables for the survivor & slasher spawns for m
 _survspawn4 = getPos surv_4;
 _slasherspawn = getPos slash;
 
-
+/*
 _param = "map" call BIS_fnc_getParamValue; //Check which map has been chosen
 if (_param == 1) then {
 survivor1 setPos _survspawn1;
@@ -20,3 +20,4 @@ lgt attachTo [slasher, [0,-0.03,0.07], "LeftShoulder"];
 deleteVehicle loader_2;
 
 };
+*/
