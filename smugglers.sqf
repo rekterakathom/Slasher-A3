@@ -2,8 +2,14 @@
 missionNamespace setVariable ["teleport_dest", 1, true]; //Create a variable
 publicVariable "teleport_dest";                         //Make it public
 
-null = ["smuggler_1",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";  //Create the smuggler
-null = ["smuggler_2",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf"; //Create the second smuggler
+_param = "map" call BIS_fnc_getParamValue; //Check which map has been chosen and then place the maps smuggler
+if (_param == 1) then {
+null = ["smuggler_radar",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";
+} else {
+null = ["smuggler_forest",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";
+};
+
+null = ["smuggler_1",false,"MineDetector",[""],3000,"MineDetector"] execVM "AL_smuggler\alias_smugg.sqf";  //Create the smuggler for the slasher
 
 sleep 10*60; //Wait ten minutes
 

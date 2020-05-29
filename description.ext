@@ -16,7 +16,7 @@ class Params
 	{
 		title = "Map"; // Param name visible in the list
 		values[] = {0,1}; // Values; must be integers; has to have the same number of elements as 'texts'
-		texts[] = {"Contact Forest","Abandoned Radar"}; // Description of each selectable item
+		texts[] = {"Contact Forest","Abandoned Radar (W.I.P)"}; // Description of each selectable item
 		default = 0; // Default value; must be listed in 'values' array, otherwise 0 is used
 		// Default values that are not whole numbers do not work. Param will default to 0 (or 1 if defined)
 	};
@@ -55,6 +55,16 @@ class CfgRemoteExec
 			jip = 0;			// sending JIP messages is disabled for this function (overrides settings in the Functions class)
 		};
 	};
+	class Commands
+	{
+	mode = 2;
+	jip = 1;
+		class animate
+		{
+			allowedTargets = 0;	// can target anyone (default)
+			jip = 1;			// sending JIP messages is enabled for this function (overrides settings in the Functions class)
+		};
+	};
 };
 
 class CfgDebriefing
@@ -64,7 +74,7 @@ class CfgDebriefing
 		title = "Survivors win!";
 		subtitle = "";
 		description = "The survivors have managed to kill the slasher!";
-		pictureBackground = "";
+		pictureBackground = "deathscreen.jpg";
 	    picture = "hd_flag";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
@@ -74,7 +84,7 @@ class CfgDebriefing
 		title = "Slasher wins!";
 		subtitle = "";
 		description = "The slasher has managed to kill all the survivors!";
-		pictureBackground = "";
+		pictureBackground = "deathscreen.jpg";
 	    picture = "KIA";
 		pictureColor[] = {0.6,0.3,0.0,1};
 	};
@@ -84,7 +94,7 @@ class CfgDebriefing
 		title = "Survivors win!";
 		subtitle = "";
 		description = "The survivors have escaped!";
-		pictureBackground = "";
+		pictureBackground = "escapescreen.jpg";
 	    picture = "hd_flag";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
@@ -92,6 +102,13 @@ class CfgDebriefing
 
 class CfgSounds
 {
+
+	class sniper
+	{
+		name = "sniper";
+		sound[] = {"\sounds\sniper.ogg", db+5, 1};
+		titles[] = {};
+	};
 	class telep_01
 	{
 		name = "telep_01";
